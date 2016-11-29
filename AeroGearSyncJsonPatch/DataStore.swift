@@ -35,7 +35,7 @@ public protocol DataStore {
     
     - parameter clientDocument: the ClientDocument to save.
     */
-    func saveClientDocument(clientDocument: ClientDocument<T>)
+    func save(clientDocument: ClientDocument<T>)
     
     /**
     Retrieves the ClientDocument matching the passed-in document documentId.
@@ -51,7 +51,7 @@ public protocol DataStore {
     
     - parameter shadowDocument: the ShadowDocument to save.
     */
-    func saveShadowDocument(shadowDocument: ShadowDocument<T>)
+    func save(shadowDocument: ShadowDocument<T>)
     
     /**
     Retrieves the ShadowDocument matching the passed-in document documentId.
@@ -67,7 +67,7 @@ public protocol DataStore {
     
     - parameter backupShadow: the BackupShadowDocument to save.
     */
-    func saveBackupShadowDocument(backupShadowDocument: BackupShadowDocument<T>)
+    func save(backupShadowDocument: BackupShadowDocument<T>)
     
     /**
     Retrieves the BackupShadowDocument matching the passed-in document documentId.
@@ -85,7 +85,7 @@ public protocol DataStore {
     - parameter documentId: the document identifier for the edit.
     - parameter clientId: the client identifier for the edit.
     */
-    func saveEdits(edit: D)
+    func save(edit: D)
     
     /**
     Retreives the array of Edits for the specified document documentId.
@@ -103,7 +103,7 @@ public protocol DataStore {
     - parameter documentId: the document identifier for the edit.
     - parameter clientId: the client identifier for the edit.
     */
-    func removeEdit(edit: D)
+    func remove(edit: D)
     
     /**
     Removes all edits for the specific client and document pair.

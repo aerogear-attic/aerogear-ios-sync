@@ -111,5 +111,5 @@ public protocol ClientSynchronizer {
     - parameter objectNode: as a string to add the content to.
     - parameter fieldName: the name of the field.
     */
-    func addContent(content:ClientDocument<T>, fieldName:String, inout objectNode:String)
+    func add(content:ClientDocument<T>, fieldName:String, objectNode:inout String)
 }

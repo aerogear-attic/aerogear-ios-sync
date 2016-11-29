@@ -27,23 +27,23 @@ class JsonPatchMessageTests: XCTestCase {
     override func setUp() {
         super.setUp()
         self.util = DocUtil()
-        let doc1:[String:AnyObject] = ["key1": "value1"]
-        let doc2:[String:AnyObject] = ["key1": "value1", "key2": "value2"]
+        let doc1: JsonNode = ["key1": "value1"]
+        let doc2: JsonNode = ["key1": "value1", "key2": "value2"]
         let updated = util.document(doc1)
         let shadowDoc = util.shadow(doc2)
         let clientSynchronizer = JsonPatchSynchronizer()
-        let edit = clientSynchronizer.clientDiff(updated, shadow: shadowDoc)
+        let edit = clientSynchronizer.clientDiff(clientDocument: updated, shadow: shadowDoc)
         message = JsonPatchMessage(id: "1", clientId: "2", edits: [edit])        
     }
     
     func testAsJsonAndFromJson() {
         let jsonString = self.message.asJson()
-        let obj = message.fromJson(jsonString)!
+        let obj = message.asPayload(json: jsonString)!
         XCTAssertEqual("2", obj.clientId)
         XCTAssertEqual("1", obj.documentId)
         XCTAssertEqual("2", obj.clientId)
-        XCTAssertEqual(1, obj.edits.count)
-        XCTAssertEqual(1, obj.edits[0].diffs.count)
-        XCTAssertEqual(obj.description, "JsonPatchMessage[documentId=1, clientId=2, edits=[JsonPatchEdit[clientId=2, documentId=1, clientVersion=0, serverVersion=0, checksum=, diffs=[JsonPatchDiff[operation=add, path=/key2 value=Optional(value2)]]]]]");
+        XCTAssertEqual(1, obj.edits?.count)
+        XCTAssertEqual(1, obj.edits?[0].diffs.count)
+        XCTAssertEqual(obj.description, "JsonPatchMessage[documentId=1, clientId=2, edits=[JsonPatchEdit[clientId=2, documentId=1, clientVersion=0, serverVersion=0, checksum=, diffs=[JsonPatchDiff[operation=add, path=/key2 value=Optional(value2)]]]])]");
     }
 }

@@ -1,8 +1,8 @@
 # aerogear ios sync [![Build Status](https://travis-ci.org/aerogear/aerogear-ios-sync.png)](https://travis-ci.org/aerogear/aerogear-ios-sync) [![Pod Version](http://img.shields.io/cocoapods/v/AeroGearSync.svg?style=flat)](http://cocoadocs.org/docsets/AeroGearSyncJsonPatch/)
 
-> This module currently build with Xcode 8 (Swift 3) and supports iOS8, iOS9 and iOS 10.
+> This module currently build with Xcode 9 (Swift 4) and supports iOS9, iOS10 and iOS 11.
 
-AeroGear iOS Differential Synchronization Client Engine represents a client side implementation for [AeroGear Differential 
+AeroGear iOS Differential Synchronization Client Engine represents a client side implementation for [AeroGear Differential
 Synchronization (DS) Server](https://github.com/aerogear/aerogear-sync-server/).
 
 |                 | Project Info  |
@@ -26,7 +26,7 @@ pod install
 ```
 3. open AeroGearSyncJsonPatch.xcworkspace
 
-## Adding the library to your project 
+## Adding the library to your project
 To add the library in your project, you can either use [CocoaPods](http://cocoapods.org) or manual install in your project. See the respective sections below for instructions:
 
 Support for Swift frameworks is supported from [CocoaPods](http://cocoapods.org) upwards. In your ```Podfile``` add:
@@ -35,7 +35,7 @@ Support for Swift frameworks is supported from [CocoaPods](http://cocoapods.org)
 source 'https://github.com/CocoaPods/Specs.git'
 
 project 'YourProjectName.xcodeproj'
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 target 'YourProjectName' do
     pod 'AeroGearSyncJsonPatch'

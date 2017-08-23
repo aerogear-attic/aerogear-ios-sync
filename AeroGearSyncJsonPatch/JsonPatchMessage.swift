@@ -46,7 +46,7 @@ public struct JsonPatchMessage: PatchMessage, CustomStringConvertible {
         if let edits = edits {
             return "JsonPatchMessage[documentId=\(documentId ?? ""), clientId=\(clientId ?? ""), edits=\(edits))]"
         }
-        return "JsonPatchMessage[documentId=\(documentId ?? ""), clientId=\(clientId ?? ""), edits=\(String(describing: edits)))]"
+        return "JsonPatchMessage[documentId=\(documentId ?? ""), clientId=\(clientId ?? ""), edits=\(edits))]"
     }
     
     /**
@@ -165,6 +165,6 @@ public struct JsonPatchMessage: PatchMessage, CustomStringConvertible {
         } catch {
             data = nil
         }
-        return String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+        return NSString(data: data!, encoding: String.Encoding.utf8.rawValue) as? String
     }
 }

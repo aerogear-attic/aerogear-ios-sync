@@ -43,9 +43,9 @@ The ClientSynchronizer and DataStore should have compatible document type.
 */
 open class ClientSyncEngine<CS:ClientSynchronizer, D:DataStore> where CS.T == D.T, CS.D == D.D, CS.P.E == CS.D  {
     
-    public typealias T = CS.T
-    public typealias E = CS.D
-    public typealias P = CS.P
+    typealias T = CS.T
+    typealias E = CS.D
+    typealias P = CS.P
     
     /**
     The ClientSynchronizer in charge of providing the patching algorithm.

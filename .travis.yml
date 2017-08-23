@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode8.1
 xcode_workspace: AeroGearSyncJsonPatch.xcworkspace
 xcode_scheme: AeroGearSyncJsonPatch
 xcode_sdk: iphonesimulator
@@ -11,4 +11,8 @@ before_install:
   - travis_wait pod repo update
 
 script:
-   - xcodebuild -workspace AeroGearSyncJsonPatch.xcworkspace -scheme AeroGearSyncJsonPatch -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' build test
+   - xcodebuild -workspace AeroGearSyncJsonPatch.xcworkspace -scheme AeroGearSyncJsonPatch -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' build test
+
+branches:
+  only:
+    - master

@@ -77,6 +77,6 @@ public struct JsonPatchDiff: Difference {
     Printable protocol implementation, provides a string representation of the object.
     */
     public var description: String {
-        return "JsonPatchDiff[operation=\(operation), path=\(path) value=\(value)]"
+        return "JsonPatchDiff[operation=\(operation), path=\(path) value=\(String(describing: value))]"
     }
 }

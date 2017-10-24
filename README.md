@@ -1,4 +1,5 @@
-# aerogear ios sync [![Build Status](https://travis-ci.org/aerogear/aerogear-ios-sync.png)](https://travis-ci.org/aerogear/aerogear-ios-sync) [![Pod Version](http://img.shields.io/cocoapods/v/AeroGearSync.svg?style=flat)](http://cocoadocs.org/docsets/AeroGearSyncJsonPatch/)
+# aerogear-ios-sync
+[![circle-ci](https://img.shields.io/circleci/project/github/aerogear/aerogear-ios-sync/master.svg)](https://circleci.com/gh/aerogear/aerogear-ios-sync) [![Pod Version](http://img.shields.io/cocoapods/v/AeroGearSyncJsonPatch.svg?style=flat)](http://cocoadocs.org/docsets/AeroGearSyncJsonPatch/)
 
 > This module currently build with Xcode 8 (Swift 3) and supports iOS8, iOS9 and iOS 10.
 
@@ -20,16 +21,16 @@ Synchronization (DS) Server](https://github.com/aerogear/aerogear-sync-server/).
 
 2. Get the dependencies
 
-The project uses [cocoapods](http://cocoapods.org) for handling its dependencies. As a pre-requisite, install [cocoapods](http://cocoapods.org) and then install the pod. On the root directory of the project run:
+The project uses [CocoaPods](http://cocoapods.org) for handling its dependencies. As a pre-requisite, install [CocoaPods](http://cocoapods.org) and then install the pod. On the root directory of the project run:
 ```bash
 pod install
 ```
-3. open AeroGearSyncJsonPatch.xcworkspace
+3. open `AeroGearSyncJsonPatch.xcworkspace`
 
 ## Adding the library to your project 
 To add the library in your project, you can either use [CocoaPods](http://cocoapods.org) or manual install in your project. See the respective sections below for instructions:
 
-Support for Swift frameworks is supported from [CocoaPods](http://cocoapods.org) upwards. In your ```Podfile``` add:
+Support for Swift frameworks is supported from [CocoaPods](http://cocoapods.org) upwards. In your `Podfile` add:
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
